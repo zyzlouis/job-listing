@@ -2,9 +2,9 @@ module JobsHelper
 
   def job_status(job)
     if job.is_hidden
-      "前台隐藏"
+      content_tag(:span,"",:class => "fa fa-lock")
     else
-      "前台显示"
+      content_tag(:span,"",:class => "fa fa-globe")
     end
   end
 end
