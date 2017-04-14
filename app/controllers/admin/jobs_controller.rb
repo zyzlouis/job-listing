@@ -46,6 +46,18 @@ class Admin::JobsController < ApplicationController
     redirect_to admin_jobs_path, alert: "Deleted success"
   end
 
+  def publish
+    @job = Job.find(param[:id])
+    @job.publish!
+    redirect_to :back
+  end
+
+  def hide
+    @job = Job.find(param[:id])
+    @job.hide!
+    redirect_to :back
+  end
+
   private
 
 
