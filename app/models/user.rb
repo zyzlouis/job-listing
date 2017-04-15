@@ -6,5 +6,8 @@ class User < ApplicationRecord
 
   def admin?
     email == 'louis@job'
-  end 
+  end
+
+  has_many :resumes
+
 end
